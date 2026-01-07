@@ -1,0 +1,302 @@
+
+
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(18, 18, 18, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #333;
+        transition: all 0.3s ease;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #00bfff;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-links a {
+        color: #e0e0e0;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #00bfff;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        color: #00bfff;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    #hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 80px;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        z-index: 2;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 1rem;
+        letter-spacing: -2px;
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        color: #00bfff;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
+
+    .tech-stack {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    .tech-badge {
+        background-color: #2a2a3a;
+        color: #00bfff;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 1px solid #00bfff;
+        transition: all 0.3s ease;
+    }
+
+    .tech-badge:hover {
+        background-color: #00bfff;
+        color: #121212;
+        transform: translateY(-3px);
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #00bfff;
+        color: #121212;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+    }
+
+    .cta-button:hover {
+        background-color: #00a0d0;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4);
+    }
+
+    /* About Section */
+    #about {
+        padding: 100px 20px;
+        background-color: #161626;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 50px;
+        color: #00bfff;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100px;
+        height: 3px;
+        background-color: #00bfff;
+        border-radius: 2px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-text {
+        flex: 1;
+        min-width: 300px;
+        max-width: 600px;
+    }
+
+    .about-text p {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    .skills {
+        flex: 1;
+        min-width: 300px;
+        max-width: 600px;
+    }
+
+    .skill-list {
+        list-style: none;
+    }
+
+    .skill-item {
+        margin-bottom: 15px;
+    }
+
+    .skill-name {
+        font-weight: 600;
+        color: #00bfff;
+    }
+
+    .skill-bar {
+        height: 10px;
+        background-color: #333;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 5px;
+    }
+
+    .skill-progress {
+        height: 100%;
+        background-color: #00bfff;
+        border-radius: 5px;
+        width: 0;
+        transition: width 1.5s ease;
+    }
+
+    /* Projects Section */
+    #projects {
+        padding: 100px 20px;
+        background-color: #121212;
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    .project-card {
+        background-color: #1a1a2e;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+        color: #00bfff;
+        margin-bottom: 10px;
+    }
+
+    .project-desc {
+        font-size: 0.95rem;
+        color: #ccc;
+        margin-bottom: 15px;
+    }
+
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .tech-tag {
+        background-color: #2a2a3a;
+        color: #00bfff;
+        padding: 4px 10px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .project-link {
+        display: inline-block;
+        color: #00bfff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .project-link:hover {
+        color: #00d9ff;
+        text-decoration: underline;
+    }
+
+    /* Contact Section */
+    #contact
